@@ -1,0 +1,128 @@
+html {
+    font-size: 14px;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px;
+}
+
+.pvr-poll {
+    position: absolute;
+    background-color: #515151;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 15px;
+    color: white;
+}
+
+    .pvr-poll.pvr-poll__bottom-right {
+        right: 0;
+        bottom: 0;
+    }
+
+    .pvr-poll .pvr-poll--title {
+        font-weight: 700;
+        text-align: center;
+    }
+
+    .pvr-poll .pvr-poll--questions {
+        margin:5px;
+    }
+    .pvr-poll .pvr-poll--questions .pvr-poll-question {
+    }
+
+        .pvr-poll .pvr-poll--questions .pvr-poll--question .pvr-poll--question--answers {
+            display: flex;
+            flex-wrap:wrap;
+        }
+
+            .pvr-poll .pvr-poll--questions .pvr-poll--question .pvr-poll--question--answers .pvr-poll--question__answer-pod {
+                width:45%;
+                margin:5px;
+                max-height:24px;
+                background-color:white;
+                color:black;
+                text-align:center;
+                cursor:pointer;
+            }
+
+                .pvr-poll .pvr-poll--questions .pvr-poll--question .pvr-poll--question--answers .pvr-poll--question__answer-pod--no-answer:hover {
+                    background-color: #cfcfcf;
+                    box-shadow: black 0 0 0 1px;
+                }
+
+                .pvr-poll .pvr-poll--questions .pvr-poll--question .pvr-poll--question--answers .pvr-poll--question__answer-pod .pvr-poll--question__answer-pod--result {
+                    position: relative;
+                    width: 100%;
+                    left: 0;
+                    top: calc(-100%);
+                    margin-bottom: -24px;
+                    height: 24px;
+                }
+
+            .pvr-poll .pvr-poll--questions .pvr-poll--question .pvr-poll--question--answers .pvr-poll--question__answer-pod .pvr-poll--question__answer-pod--result__chosen {
+                box-shadow: #337ce0ff 0 0 0 1px;
+                border: 1px solid #337ce0ff;
+            }
+
+            .pvr-poll .pvr-poll--questions .pvr-poll--question .pvr-poll--question--answers .pvr-poll--question__answer-pod .pvr-poll--question__answer-pod--result.pvr-poll--question__answer-pod--result__chosen:after {
+                background: #0064ee71;
+            }
+
+                    .pvr-poll .pvr-poll--questions .pvr-poll--question .pvr-poll--question--answers .pvr-poll--question__answer-pod .pvr-poll--question__answer-pod--result:after {
+                        content: " ";
+                        width: var(--pvr-answer-width);
+                        position: relative;
+                        display: block;
+                        background: #948f8f71;
+                        color: #00000000;
+                        left: 0;
+                        height: 24px;
+                        -webkit-transition: width 1s ease-in-out;
+                        -moz-transition: width 1s ease-in-out;
+                        -o-transition: width 1s ease-in-out;
+                        transition: width 1s ease-in-out, color 1s ease-in-out;
+                    }
+
+
+            .pvr-poll .pvr-poll--questions .pvr-poll--question .pvr-poll--question--answers .pvr-poll--question__answer-pod .pvr-poll--question__answer-pod--result.pvr-poll--question__answer-pod--result__complete:after {
+                -webkit-transition: none;
+                -moz-transition: none;
+                -o-transition: none;
+                transition: none;
+            }
+
+            .pvr-poll .pvr-poll--questions .pvr-poll--question .pvr-poll--question--answers .pvr-poll--question__answer-pod.pvr-poll--question__answer-pod--result__complete {
+                color: #000000;
+                background: #948f8fff;
+                width: 100%;
+                content: var(--pvr-answer-data);
+                transition: color 0.25s ease-in-out;
+            }
+
+            .pvr-poll .pvr-poll--questions .pvr-poll--question .pvr-poll--question--answers .pvr-poll--question__answer-pod:hover .pvr-poll--question__answer-pod--result__complete:after {
+                color: #000000;
+                background: #948f8fff;
+                width: 100%;
+                content: var(--pvr-answer-data);
+                transition: color 0.25s ease-in-out;
+            }
+
+            .pvr-poll .pvr-poll--questions .pvr-poll--question .pvr-poll--question--answers .pvr-poll--question__answer-pod:hover .pvr-poll--question__answer-pod--result__complete.pvr-poll--question__answer-pod--result__chosen:after {
+                color: #000000;
+                background: #337ce0ff;
+                width: 100%;
+                content: var(--pvr-answer-data);
+                transition: color 0.25s ease-in-out;
+            }

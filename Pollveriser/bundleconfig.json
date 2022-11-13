@@ -1,0 +1,11 @@
+[
+  {
+    "outputFileName": "wwwroot/js/polleriser-full.js",
+    "inputFiles": [
+      "wwwroot/js/pollveriser.api.js",
+      "wwwroot/js/pollveriser.render.js",
+      "wwwroot/js/pollveriser.client-store.js",
+      "wwwroot/js/pollveriser.core.js"
+    ]
+  }
+]
