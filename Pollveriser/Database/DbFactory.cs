@@ -1,6 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Pollveriser.Core.EntityFramework;
-using Pollveriser.Core.EntityFramework.Entities;
+using Pollveriser.Core.EntityFramework.Infrastructure;
 
 namespace Pollveriser.Database
 {

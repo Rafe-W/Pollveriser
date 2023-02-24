@@ -1,0 +1,19 @@
+﻿@page
+@model React
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center" data-pvr-enable="true">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <div id="pollveriser_target">
+    </div>
+</div>
+
+@section Scripts {
+    <script src="~/lib/babel-standalone/babel.min.js"></script>
+    <script src="~/lib/react/umd/react.development.js"></script>
+    <script src="~/lib/react-dom/umd/react-dom.development.js"></script>
+    <script src="~/js/pollveriser-full-react.js" asp-append-version="true" type="text/babel"></script>
+}

@@ -1,11 +1,22 @@
 [
   {
-    "outputFileName": "wwwroot/js/polleriser-full.js",
+    "outputFileName": "wwwroot/js/pollveriser-full.js",
     "inputFiles": [
-      "wwwroot/js/pollveriser.api.js",
-      "wwwroot/js/pollveriser.render.js",
-      "wwwroot/js/pollveriser.client-store.js",
-      "wwwroot/js/pollveriser.core.js"
+      "wwwroot/js/pollveriser.core.js",
+      "wwwroot/js/core/pollveriser.api.js",
+      "wwwroot/js/native/pollveriser.render.js",
+      "wwwroot/js/core/pollveriser.client-store.js",
+      "wwwroot/js/native/pollveriser.init.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/js/pollveriser-full-react.js",
+    "inputFiles": [
+      "wwwroot/js/pollveriser.core.js",
+      "wwwroot/js/core/pollveriser.api.js",
+      "wwwroot/js/react/pollveriser.render.js",
+      "wwwroot/js/core/pollveriser.client-store.js",
+      "wwwroot/js/react/pollveriser.init.js"
     ]
   }
 ]

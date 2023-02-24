@@ -25,38 +25,6 @@ public class Poll
     /// If specified, it will apply a REGEX to the path on the current page. (Leave blank to target all pages)
     /// </summary>
     public string? MustMatchPath { get; set; }
-
-    internal bool IsValidForCurrentDate(DateTime currentDateTime)
-    {
-        if (ActiveFrom is not null && currentDateTime < ActiveFrom)
-            return false;
-
-        if (ResultsAvaliableTo is not null && currentDateTime > ResultsAvaliableTo)
-            return false;
-        else if (ActiveTo is not null && currentDateTime > ActiveFrom)
-            return false;
-
-        return true;
-    }
-
-    internal bool HasMatchingTag(List<string> dataTags)
-    {
-        var tags = InsertForDataTags?.Split(',', StringSplitOptions.RemoveEmptyEntries) ?? Array.Empty<string>();
-        var allTags = tags.Union(MustMatchTags?.Split(',', StringSplitOptions.RemoveEmptyEntries) ?? Array.Empty<string>()).ToList();
-
-        return allTags.Count == 0 || allTags.Any(pt => dataTags.Contains(pt));
-    }
-
-    internal bool HasMatchingPath(string currentUrlPath)
-    {
-        if (MustMatchPath is null)
-            return true;
-
-        var pathRegex = new Regex(MustMatchPath);
-
-        return pathRegex.IsMatch(currentUrlPath);
-    }
-
     /// <summary>
     /// Comma separated list of tags
     /// If NOT specified, this rule is ignored. It will show if it matches any other rules
@@ -70,4 +38,34 @@ public class Poll
     /// </summary>
     public string? InsertForDataTags { get; set; }
 
+    public bool IsValidForCurrentDate(DateTime currentDateTime)
+    {
+        if (ActiveFrom is not null && currentDateTime < ActiveFrom)
+            return false;
+
+        if (ResultsAvaliableTo is not null && currentDateTime > ResultsAvaliableTo)
+            return false;
+        else if (ActiveTo is not null && currentDateTime > ActiveFrom)
+            return false;
+
+        return true;
+    }
+
+    public bool HasMatchingTag(List<string> dataTags)
+    {
+        var tags = InsertForDataTags?.Split(',', StringSplitOptions.RemoveEmptyEntries) ?? Array.Empty<string>();
+        var allTags = tags.Union(MustMatchTags?.Split(',', StringSplitOptions.RemoveEmptyEntries) ?? Array.Empty<string>()).ToList();
+
+        return allTags.Count == 0 || allTags.Any(pt => dataTags.Contains(pt));
+    }
+
+    public bool HasMatchingPath(string currentUrlPath)
+    {
+        if (MustMatchPath is null)
+            return true;
+
+        var pathRegex = new Regex(MustMatchPath);
+
+        return pathRegex.IsMatch(currentUrlPath);
+    }
 }

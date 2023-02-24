@@ -1,15 +1,11 @@
-using Pollveriser.Core;
-using Pollveriser.Core.EntityFramework;
-using Pollveriser.Database;
+using Pollveriser.Core.Api;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
-builder.Services.AddScoped<DbFactory>();
-builder.Services.AddScoped<IDbContextProvider, DbFactory>();
-builder.Services.AddScoped<IPollRepository, PollRepository>();
-builder.Services.AddScoped<PollApiService>();
+builder.Services.AddPollveriserWithEntityFramework();
+builder.Services.AddScoped<PollController>();
 
 var app = builder.Build();
 

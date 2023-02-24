@@ -14,8 +14,8 @@ The most basic use case (hosting a poll) would require
 	* A data repository that can receive CRUD operations via the `IPollRepository` interface
 	* A website with URL paths to target polls for certain pages (or every page!)
 		* Add data-poll-* tags to an element on the page to trigger a poll if set up
-	* Register the `PollveriseController` so it's accessible on your application 🏗 (example in project)
-	* Register the PollveriseDependencies 🏗
+	* Register the `PollveriserController` so it's accessible on your application ) at `"/api/pollveriser"` 🏗 (example in project
+	* Register the PollveriserDependencies 🏗
 	* Include the `pollverise-full.js` file in your scripts
 
 > I've included a pre-built EntityFrameworkCore implementation for the Repository. Just add the required classes to your DB context and you're all good to go, and register it against the `IDbContextProvider` interface.

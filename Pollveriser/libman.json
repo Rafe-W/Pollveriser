@@ -1,0 +1,21 @@
+{
+  "version": "1.0",
+  "defaultProvider": "cdnjs",
+  "libraries": [
+    {
+      "provider": "cdnjs",
+      "library": "react@18.2.0",
+      "destination": "wwwroot/lib/react/"
+    },
+    {
+      "provider": "cdnjs",
+      "library": "babel-standalone@7.21.2",
+      "destination": "wwwroot/lib/babel-standalone/"
+    },
+    {
+      "provider": "cdnjs",
+      "library": "react-dom@18.2.0",
+      "destination": "wwwroot/lib/react-dom/"
+    }
+  ]
+}

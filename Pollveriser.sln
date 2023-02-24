@@ -9,12 +9,14 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pollveriser.Core", "Pollver
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pollveriser.Core.EntityFramework", "Pollveriser.Core.EntityFramework\Pollveriser.Core.EntityFramework.csproj", "{D95A83D6-954F-4637-8CBF-EBC3025C85BA}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pollveriser.Admin", "Pollveriser.Admin\Pollveriser.Admin.csproj", "{3473745D-3ABC-472F-9D25-210B4A5214E5}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{7A6DA950-F80A-40CA-BAB9-E8537694057E}"
 	ProjectSection(SolutionItems) = preProject
 		ReadMe.md = ReadMe.md
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pollveriser.Core.Api", "Pollveriser.Core.Api\Pollveriser.Core.Api.csproj", "{229D36BF-7349-452A-8E78-03DD03D16EF9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pollveriser.Admin", "Pollveriser.Admin\Pollveriser.Admin.csproj", "{7D805C00-ACDE-4346-9F49-F5645EFCC971}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -34,10 +36,14 @@ Global
 		{D95A83D6-954F-4637-8CBF-EBC3025C85BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D95A83D6-954F-4637-8CBF-EBC3025C85BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D95A83D6-954F-4637-8CBF-EBC3025C85BA}.Release|Any CPU.Build.0 = Release|Any CPU
-		{3473745D-3ABC-472F-9D25-210B4A5214E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3473745D-3ABC-472F-9D25-210B4A5214E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3473745D-3ABC-472F-9D25-210B4A5214E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3473745D-3ABC-472F-9D25-210B4A5214E5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{229D36BF-7349-452A-8E78-03DD03D16EF9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{229D36BF-7349-452A-8E78-03DD03D16EF9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{229D36BF-7349-452A-8E78-03DD03D16EF9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{229D36BF-7349-452A-8E78-03DD03D16EF9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7D805C00-ACDE-4346-9F49-F5645EFCC971}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D805C00-ACDE-4346-9F49-F5645EFCC971}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D805C00-ACDE-4346-9F49-F5645EFCC971}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D805C00-ACDE-4346-9F49-F5645EFCC971}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
